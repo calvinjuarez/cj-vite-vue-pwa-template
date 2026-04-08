@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { APP_NAME } from './app.meta.js'
 
 const routes = [
 	{
@@ -27,8 +28,7 @@ const router = createRouter({
 })
 
 router.afterEach((to) => {
-	const suffix = 'cj-vite-vue-pwa-template'
-	document.title = to.meta?.title ? `${to.meta.title} | ${suffix}` : suffix
+	document.title = to.meta?.title ? `${to.meta.title} | ${APP_NAME}` : APP_NAME
 })
 
 export default router

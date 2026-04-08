@@ -11,6 +11,8 @@
 	},
 	"scripts": {
 		"dev": "vite",
+		"icons": "node scripts/rasterize-app-icon.mjs",
+		"prebuild": "npm run icons",
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "vitest",
@@ -22,6 +24,7 @@
 	"devDependencies": {
 		"@vitejs/plugin-vue": "^6.0.4",
 		"happy-dom": "^20.1.0",
+		"sharp": "^0.34.5",
 		"vite": "^8.0.7",
 		"vite-plugin-pwa": "^1.2.0",
 		"vitest": "^4.0.18"
