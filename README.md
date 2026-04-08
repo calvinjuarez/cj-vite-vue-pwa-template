@@ -58,7 +58,7 @@ Project sites are served at `https://<user>.github.io/<repo>/`; the app and serv
 	Commit the updated **`package.json`** (if you changed it) and **`package-lock.json`**. From here on, use **`npm ci`** for installs and match what CI does.
 
 - [ ] Set `VITE_BASE_PATH` in [`.env.production`](.env.production) to `/your-new-repo-name/` (trailing slash).
-- [ ] Search/replace user-facing strings: [`index.html`](index.html), [`public/manifest.webmanifest`](public/manifest.webmanifest), [`src/router.js`](src/router.js), [`src/views/HomeView.vue`](src/views/HomeView.vue).
+- [ ] Search/replace user-facing strings: [`index.html`](index.html) (page `<title>`, `apple-mobile-web-app-title`), [`public/manifest.webmanifest`](public/manifest.webmanifest), [`src/router.js`](src/router.js), [`src/views/HomeView.vue`](src/views/HomeView.vue).
 - [ ] Optional: replace [`LICENSE`](LICENSE) copyright line with your legal name if you fork publicly.
 - [ ] Finally, rewrite [`README.md`](README.md) for your project.
 - [ ] Optional: tag a first baseline (e.g. **`v0.0.1`** or **`v0.1.0`**) and/or publish a GitHub **Release** so you have a clear “post-template” snapshot.
