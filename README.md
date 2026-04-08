@@ -11,7 +11,7 @@ Personal starter for Vue 3 SPAs: **Vite**, **Pinia**, **Vue Router**, **Bootstra
 
 ## Requirements
 
-- Node.js matching [`.nvmrc`](.nvmrc) (e.g. `nvm use` / `fnm use`).
+- **Node.js 24.x (LTS Krypton)**, e.g. from [`.nvmrc`](.nvmrc) with `nvm use` / `fnm use`. Minimum is under `engines` in [package.json](package.json).
 
 ## Commands
 
