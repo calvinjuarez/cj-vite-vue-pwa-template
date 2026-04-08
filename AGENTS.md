@@ -41,8 +41,4 @@ Use tab indentation.
 
 - Write docs for the things we build.
 - For key architecture decisions, write ADR docs to `docs/adr`. When writing an ADR doc, read [docs/adr/README.md](docs/adr/README.md).
-- Template setup (env files, Pages, forks): see [README.md](README.md).
-
-## Patched npm dependencies
-
-This project does **not** use [patch-package](https://github.com/ds300/patch-package) today. If we later need to patch a dependency, add `patch-package` and a `postinstall` script, create a `patches/` directory, and document the workflow in `AGENTS.md` (edit `node_modules`, run `npx patch-package <package>`, restart Vite after changes).
+- Keep [README.md](README.md) accurate for this repo: how to install and run, environment setup, testing, etc.
