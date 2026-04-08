@@ -58,12 +58,6 @@
 	--house--color--danger-muted: var(--house--red-400);
 	--house--color--danger-hint: var(--house--red-200);
 	--house--color--danger-faint: var(--house--red-100);
-	/* ##### Template (orange) – default / placeholder affordances; swap for real brand */
-	--house--color--template: var(--house--orange-500);
-	--house--color--template-dark: var(--house--orange-600);
-	--house--color--template-muted: var(--house--orange-400);
-	--house--color--template-hint: var(--house--orange-200);
-	--house--color--template-faint: var(--house--orange-100);
 
 	/* ## APPLICATIONS */
 

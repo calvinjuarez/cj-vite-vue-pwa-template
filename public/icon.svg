@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-	<!-- Base #e0e0e0 (palette gray 200); strokes #fd7e14 (template / orange 500). See docs/design-tokens.md. -->
+	<!-- Base #e0e0e0 (palette gray 200); strokes #fd7e14 (orange 500). See docs/design-tokens.md. -->
 	<rect width="512" height="512" rx="96" fill="#e0e0e0"/>
 	<rect
 		x="56"
