@@ -12,11 +12,11 @@
 	"scripts": {
 		"dev": "vite",
 		"icons": "node scripts/rasterize-app-icon.mjs",
-		"prebuild": "npm run icons",
+		"verify:icons": "node scripts/verify-app-icon.mjs",
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "vitest",
-		"test:run": "vitest run"
+		"test:run": "vitest run && npm run verify:icons"
 	},
 	"engines": {
 		"node": ">=24.11.0"

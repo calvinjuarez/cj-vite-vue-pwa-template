@@ -6,6 +6,9 @@ Accepted
 
 ## See also
 
+- [ADR-002](002-centralized-app-meta.md) – How the web manifest is generated and how app identity flows into HTML.
+- [ADR-003](003-icon-pipeline.md) – How install icons are produced and kept in sync with the source SVG.
+
 Optional: when we add client-side persistence (e.g. IndexedDB or localStorage) for app data or preferences, document it in a new ADR; the service worker will still complement that by precaching the app shell.
 
 ## Context
@@ -20,7 +23,7 @@ Add a service worker that precaches build artifacts. Use `vite-plugin-pwa` with 
 - Serves cached content when the network is unavailable
 - Uses a navigation fallback so SPA routes work offline (e.g. refresh on `/settings` serves the app shell)
 
-We keep the PWA manifest in `public/`; the plugin registers the service worker and generates the precache list.
+The PWA web manifest is generated at build time from [`src/app.meta.js`](../../src/app.meta.js) (see [ADR-002](002-centralized-app-meta.md)); `vite-plugin-pwa` registers the service worker and generates the precache list.
 
 ## Consequences
 
@@ -39,4 +42,4 @@ We keep the PWA manifest in `public/`; the plugin registers the service worker a
 
 ## Implementation Notes
 
-Configured in [`vite.config.js`](../../vite.config.js): `VitePWA` with `manifest: false` (static manifest file), Workbox `navigateFallback` derived from `VITE_BASE_PATH`, and `registerType: 'autoUpdate'`.
+Configured in [`vite.config.js`](../../vite.config.js): `VitePWA` with `manifest: { ... }` populated from `app.meta.js` exports, a custom `app-html-meta` plugin that resolves `%APP_*%` tokens in `index.html` before the PWA plugin injects the manifest link, Workbox `navigateFallback` derived from `VITE_BASE_PATH`, and `registerType: 'autoUpdate'`.

@@ -1,4 +1,5 @@
-import { copyFileSync, mkdirSync } from 'fs'
+import { createHash } from 'crypto'
+import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'fs'
 import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
@@ -20,6 +21,9 @@ try {
 	for (const { file, size } of targets) {
 		await sharp(stagedSvg).resize(size, size).png().toFile(join(appDir, file))
 	}
+	const buf = readFileSync(sourceSvg)
+	const hash = createHash('sha256').update(buf).digest('hex')
+	writeFileSync(join(appDir, 'icon.svg.sha256'), `${hash}\n`)
 } catch (err) {
 	console.error(err)
 	process.exit(1)
