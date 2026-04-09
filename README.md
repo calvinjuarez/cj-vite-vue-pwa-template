@@ -11,7 +11,7 @@ Personal starter for Vue 3 SPAs: **Vite**, **Pinia**, **Vue Router**, **Bootstra
 
 ## Requirements
 
-- **Node.js 24.x (LTS Krypton)**, e.g. from [`.nvmrc`](.nvmrc) with `nvm use` / `fnm use`. Minimum is under `engines` in [package.json](package.json).
+- **Node.js** LTS **Krypton** (see [`.nvmrc`](.nvmrc): `lts/krypton`; for example `nvm use` / `fnm use`). Minimum version is under `engines` in [package.json](package.json).
 
 ## Commands
 
@@ -58,14 +58,15 @@ Project sites are served at `https://<user>.github.io/<repo>/`; the app and serv
 	Commit the updated **`package.json`** (if you changed it) and **`package-lock.json`**. From here on, use **`npm ci`** for installs and match what CI does.
 
 - [ ] Set `VITE_BASE_PATH` in [`.env.production`](.env.production) to `/your-new-repo-name/` (trailing slash).
-- [ ] Search/replace user-facing strings: [`index.html`](index.html) (page `<title>`, `apple-mobile-web-app-title`), [`public/manifest.webmanifest`](public/manifest.webmanifest), [`src/router.js`](src/router.js), [`src/views/HomeView.vue`](src/views/HomeView.vue).
+- [ ] **Branding and PWA fields** are centralized in [`src/app.meta.js`](src/app.meta.js) (used for the generated manifest, [`index.html`](index.html) placeholders, [`src/router.js`](src/router.js), and [`src/views/HomeView.vue`](src/views/HomeView.vue)). Adjust [`public/manifest.webmanifest`](public/manifest.webmanifest) if you extend it beyond generated values.
+- [ ] **App icon:** canonical vector is [`icon.svg`](icon.svg) at the repo root; after editing it, run [`npm run icons`](package.json) and commit `public/app/` (copied SVG, PNGs, and `icon.svg.sha256`). [`npm run test:run`](package.json) runs [`verify:icons`](package.json) so CI fails if the SVG drifted from the last generated assets.
 - [ ] Optional: replace [`LICENSE`](LICENSE) copyright line with your legal name if you fork publicly.
 - [ ] Finally, rewrite [`README.md`](README.md) for your project.
 - [ ] Optional: tag a first baseline (e.g. **`v0.0.1`** or **`v0.1.0`**) and/or publish a GitHub **Release** so you have a clear “post-template” snapshot.
 
 ## Docs
 
-Rules and conventions for AI coding agent: [AGENTS.md](AGENTS.md). Design guides, ADR process, and related documentation for all contributors—ai or human: [docs/README.md](docs/README.md).
+Rules and conventions for AI coding agents: [AGENTS.md](AGENTS.md). Design guides, ADR process, and documentation index: [docs/README.md](docs/README.md).
 
 ## License
 

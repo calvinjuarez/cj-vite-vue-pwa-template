@@ -4,7 +4,9 @@ Project overview, env files, and GitHub Pages: see the repository [README](../RE
 
 ## Subdirectories
 
-- [adr/](adr/) – Architecture Decision Records
+- [adr/](adr/README.md) – Architecture Decision Records
+- [roadmap/](roadmap/README.md) – Planned features (intent)
+- [proposals/](proposals/README.md) – Ideas under exploration
 
 ## Docs
 

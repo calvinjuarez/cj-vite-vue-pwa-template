@@ -21,6 +21,7 @@ Use tab indentation.
 
 - Fenced code blocks must specify a language (use `text` for plain text).
 - No bold/italic as pseudo-headings; use proper heading levels.
+- Markdown (tables, headings, indexes): [.cursor/skills/markdown/SKILL.md](.cursor/skills/markdown/SKILL.md); table alignment helper: [.cursor/skills/markdown/scripts/align_table.py](.cursor/skills/markdown/scripts/align_table.py).
 
 **Full docs:** [docs/style-guide--markdown.md](docs/style-guide--markdown.md)
 
@@ -39,6 +40,7 @@ Use tab indentation.
 
 ## Documentation
 
+- **Cursor rules:** [.cursor/rules/](.cursor/rules/) – thin wrappers so file-type edits load the right style guide from `docs/`.
 - Write docs for the things we build.
 - For key architecture decisions, write ADR docs to `docs/adr`. When writing an ADR doc, read [docs/adr/README.md](docs/adr/README.md).
 - Keep [README.md](README.md) accurate for this repo: how to install and run, environment setup, testing, etc.

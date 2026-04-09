@@ -1,5 +1,8 @@
 {
 	"default": true,
+	"MD041": {
+		"front_matter_title": "^\\s*(title|name)\\s*[:=]"
+	},
 	"MD010": false,
 	"MD009": false,
 	"MD013": false,
